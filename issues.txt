@@ -1,0 +1,10 @@
+1. algorithm for the move images
+    both the views will have a different algorithm to move images and display them.
+    2 for loops used-- to display 9 images. Figure out the increment from SESSION variable
+    - for 16 image view, the increment is just one to each loop
+    - for 256 image view, the increment happens in n and m and then x and y are made based on n and m.
+2. figure out how to use git
+    never used it before so idk how to do it - tanmay.
+3. figure out composer issues
+    a. monolog issues -- monolog/logger not found - tanmay.
+    
