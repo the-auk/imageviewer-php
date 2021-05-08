@@ -4,5 +4,6 @@ hw4 for CS174
 Tanmay Siwach 012556167
 Alexa Kegarice 011988054
 
+Run composer to install monolog and other dependencies in vendor folder. 
 Run tilemaker first with two arguments, the first being the image and the second being the directory name.
-then run the index.php file.
+then run the index.php file using localhost.
