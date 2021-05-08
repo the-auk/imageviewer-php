@@ -1,4 +1,12 @@
+composer require monolog/monolog
+
 <?php
+require_once "autoload.php";
+
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+$logger = new Logger('stderr');
+$logger->pushHandler(new StreamHandler('php://stderr', Logger::INFO));
 
 $dir = $argv[2];
 if( is_dir($dir) === false )
@@ -15,6 +23,7 @@ for($i=0;$i<4;$i++){
         if ($im2 !== FALSE) {
             $name=$i.$j;
             imagejpeg($im2, $dir."/"."$name.jpg");
+            $logger->info("$name.jpg created");
             imagedestroy($im2);
         }                       
     }
@@ -32,6 +41,7 @@ for($j=0;$j<4;$j++){
             if ($bool !== FALSE) {
                 $name=$j.$m.$i.$n;
                 imagejpeg($thumb, $dir."/"."$name.jpg");
+                $logger->info("$name.jpg created");
                 imagedestroy($thumb);
         }                       
     }
